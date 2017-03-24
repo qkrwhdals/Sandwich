@@ -1,0 +1,27 @@
+<script>
+
+function printCalender(y, m){
+    Cal=new Date();
+    Cal.setYear(y);
+    Cal.setMonth(m-1);
+    Cal.setDate(1);
+
+    document.write("달력\n");
+
+    for(i=1; i<=Cal.getDay(); i++){
+        document.write('    ');
+    }
+    document.write(1);
+    for(i=2; i<=31; i++){
+        Cal.setDate(i);
+        if(Cal.getDay()==0){
+            document.write("\n");
+        }
+        document.write(i+'  ');
+    }
+    
+}
+
+printCalender(2017, 3);
+
+</script>
