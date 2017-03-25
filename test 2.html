@@ -1,27 +1,30 @@
 <script>
 
 function printCalender(y, m){
-    Cal=new Date();
-    Cal.setYear(y);
-    Cal.setMonth(m-1);
-    Cal.setDate(1);
-
-    document.write("달력\n");
-
-    for(i=1; i<=Cal.getDay(); i++){
-        document.write('    ');
+    Cal=new Date();                 //날짜 변수
+    Cal.setYear(y);                 //연도 설정
+    Cal.setMonth(m-1);              //월 설정
+    Cal.setDate(1);                 //초기값 1일
+    
+    document.write("Calender<br>");
+    document.write(y+'/'+m+'<br>');
+    for(i=1; i<=Cal.getDay(); i++){             //첫 주 공백
+        document.write('&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp'+'&nbsp');
     }
-    document.write(1);
-    for(i=2; i<=31; i++){
-        Cal.setDate(i);
-        if(Cal.getDay()==0){
-            document.write("\n");
+    document.write(1+'&nbsp'+'&nbsp');
+    for(i=2; i<=31; i++){                       //달력 출력
+        if(i<=10){
+            document.write("&nbsp"+'&nbsp');    //한 자리 수와 두 자리 수 공백 맞춰주기
         }
-        document.write(i+'  ');
+        Cal.setDate(i);
+        if(Cal.getDay()==0){                    //일요일이면 줄 바꿈
+            document.write("<br>");
+        }
+        document.write(i+'&nbsp&nbsp');
     }
     
 }
 
-printCalender(2017, 3);
+printCalender(2017, 3);               //함수 호출
 
 </script>
