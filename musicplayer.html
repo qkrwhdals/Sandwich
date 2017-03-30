@@ -1,0 +1,50 @@
+<script>
+
+function musicplayer(l, f, h, tOO, s){
+    
+    this.list=l;
+    this.files=f;
+    this.help=h;
+    this.turnOnOff=tOO;
+    this.setting=s;                                     //복잡한 함수들이 있겠지만 다 구현할 수는 없으므로 생략
+
+    this.play=function(pM, p, nM, s, v){
+        this.previousMusic=pM;
+        this.pausePlay=p;
+        this.nextMusic=n;
+        this.speed=s;
+        this.volume=v;                                  //play class
+
+        function set(ss, vv){                           //play class의 내장 함수(음악환경)
+            //doing setting play environment
+        }
+        
+        function dropTheBeat(){                         //play class의 내장 함수(재생)
+            if(this.pausePlay){
+                //화면이 꺼지지 않도록 setting
+                //turn on the music
+            }
+            else{
+                //화면이 곧 꺼지도록 setting
+            }
+        }
+
+        if(this.turnOnOff){                             //프로그램이 켜지면 기본적으로 재생함수를 호출함
+            set(this.speed, this.volume);
+            dropTheBeat();
+        }
+        else{
+            alert("정말 종료하시겠습니까?");
+        }
+    }
+
+    this. settings=function(rS, e, eP, lI, d){          //settings class
+        this.repeatStyle=rS;
+        this.eQ=e;
+        this.earPhone=eP;
+        this.logIn=lI;
+        this.donation=d;                                //복잡한 함수들이 있겠지만 다 구현할 수는 없으므로 생략
+    }
+
+}
+</script>
